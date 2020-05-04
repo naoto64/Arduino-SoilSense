@@ -9,21 +9,22 @@ SoilSense::SoilSense(uint8_t pin) {
   pinMode(pin, INPUT);
 }
 
-int SoilSense::measure() {
-  int sum = 0;
+long SoilSense::measure() {
+  int val = 0;
   for (size_t i = 0; i < 10; i++) {
-    sum += analogRead(_pin);
+    val += analogRead(_pin);
   }
-  return sum / 10;
+  val = 0x100000 / (val / 10 + 1);
+  return val;
 }
 
 byte SoilSense::value(int min, int max) {
   _min = min;
   _max = max;
-  int rawVal = measure();
+  long rawVal = measure();
   rawVal -= _min;
   if(rawVal < 0) rawVal = 0;
-  byte val = (byte)(rawVal * 100 / (_max - _min));
-  if(val > 100) val = 100;
+  rawVal = rawVal * 100 / (_max - _min);
+  byte val = rawVal <= 100 ? (byte)rawval : 100;
   return val;
 }
