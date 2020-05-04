@@ -41,6 +41,7 @@ measure()
 ````cpp:example.ino
 value(int min, int max)
 ````
+
     min: Value when the soil is dry. Get with measure ().
     max: The maximum amount of soil that can contain water. Get with measure ().
 
