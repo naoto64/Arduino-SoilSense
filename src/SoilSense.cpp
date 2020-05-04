@@ -30,5 +30,5 @@ byte SoilSense::value(int min, int max) {
 }
 
 long SoilSense::convert(int value) {
-  return 0x100000 - 0x100000 / ((long)val + 1);
+  return 0x100000 - 0x100000 / ((long)value + 1);
 }
