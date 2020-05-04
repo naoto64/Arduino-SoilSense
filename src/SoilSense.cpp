@@ -14,7 +14,7 @@ long SoilSense::measure() {
   for (size_t i = 0; i < 10; i++) {
     val += analogRead(_pin);
   }
-  val = 0x100000 / (val / 10 + 1);
+  val = 0x100000 - 0x100000 / (val / 10 + 1);
   return val;
 }
 
