@@ -36,15 +36,15 @@ SoilSense SoilSense(uint8_t pin)
 measure()
 ````
 
-    The raw value of the sensor. The range of values is 0 to 1023.
+    The raw value of the sensor. The range of values is 0 to 1023.
 
 ````cpp:example.ino
 value(int min, int max)
 ````
-    min: Value when the soil is dry. Get with measure ().
-    max: The maximum amount of soil that can contain water. Get with measure ().
+    min: Value when the soil is dry. Get with measure ().
+    max: The maximum amount of soil that can contain water. Get with measure ().
 
-    Returns the soil humidity in bytes. The range of values is 0 to 100.
+    Returns the soil humidity in bytes. The range of values is 0 to 100.
 
 ## License
 
