@@ -12,6 +12,7 @@ public:
   byte value(long min, long max);
 
 private:
+  long convert(int value);
   uint8_t _pin;
   long _min;
   long _max;
