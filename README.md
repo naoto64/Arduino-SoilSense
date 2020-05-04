@@ -47,7 +47,7 @@ SoilSense init(int min, int max, byte samples = 10, byte lowpass = 20)
     Initialize SoilSense.
 
 ````cpp:example.ino
-measure(byte samples = 10)
+SoilSense measure(byte samples = 10)
 ````
 
     samples: The number of samplings.    
@@ -55,7 +55,7 @@ measure(byte samples = 10)
     The raw value of the sensor. The range of values is 0 to 1023.
 
 ````cpp:example.ino
-value()
+SoilSense value()
 ````
 
     Returns the soil moisture in bytes. The range of values is 0 to 100.
