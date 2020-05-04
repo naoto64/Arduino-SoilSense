@@ -8,7 +8,7 @@
 class SoilSense {
 public:
   SoilSense(uint8_t pin);
-  init(int min, int max, byte samples=1, byte lowpass=20);
+  init(int min, int max, byte samples=10, byte lowpass=20);
   int measure(byte samples=1);
   byte value();
 
