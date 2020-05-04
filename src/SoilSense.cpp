@@ -10,15 +10,15 @@ SoilSense::SoilSense(uint8_t pin) {
   pinMode(pin, INPUT_PULLUP);
 }
 
-int SoilSense::init(int min, int max, int samples, byte lowpass) {
+int SoilSense::init(int min, int max, byte samples, byte lowpass) {
   _min = convert(min);
   _max = convert(max);
   _samples = samples;
   _lowpass = lowpass;
 }
 
-int SoilSense::measure(int samples) {
-  int val = 1023 * samples;
+int SoilSense::measure(byte samples) {
+  int val = 1023 * (int)samples;
   for (size_t i = 0; i < samples; i++) {
     val -= analogRead(_pin);
   }
