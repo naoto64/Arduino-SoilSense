@@ -18,7 +18,7 @@ long SoilSense::measure() {
   return val;
 }
 
-byte SoilSense::value(int min, int max) {
+byte SoilSense::value(long min, long max) {
   _min = min;
   _max = max;
   long rawVal = measure();
