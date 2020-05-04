@@ -42,7 +42,7 @@ SoilSense init(byte min, byte max, byte samples, byte lowpass)
     max: The maximum amount of soil that can contain water. Get with measure().    
     samples: The number of samplings.    
     lowpass: The value of the low pass filter. The larger the value, the smoother it becomes.    
-    Initialize SoilSense.
+    Initialize SoilSense.
 
 ````cpp:example.ino
 measure(byte samples = 1)
