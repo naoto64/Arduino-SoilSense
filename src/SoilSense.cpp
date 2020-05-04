@@ -14,7 +14,7 @@ int SoilSense::measure() {
   for (size_t i = 0; i < 10; i++) {
     val += analogRead(_pin);
   }
-  return val;
+  return val / 10;
 }
 
 byte SoilSense::value(int min, int max) {
