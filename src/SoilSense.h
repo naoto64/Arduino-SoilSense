@@ -1,8 +1,8 @@
 /*
  * SoilSense.h
  */
-#ifndef _RAIN_SENSE_H
-#define _RAIN_SENSE_H
+#ifndef _SOIL_SENSE_H
+#define _SOIL_SENSE_H
 #include <Arduino.h>
 
 class SoilSense {
