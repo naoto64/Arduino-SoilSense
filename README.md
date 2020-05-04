@@ -36,7 +36,7 @@ SoilSense SoilSense(uint8_t pin)
     Create an instance.
 
 ````cpp:example.ino
-SoilSense init(byte min, byte max, byte samples, byte lowpass)
+SoilSense init(byte min, byte max, byte samples = 1, byte lowpass = 20)
 ````
 
     min: Value when the soil is dry. Get with measure().   
