@@ -32,6 +32,7 @@ SoilSense SoilSense(uint8_t pin)
 ````
 
     pin: Analog pin number  
+
     Create an instance.
 
 ````cpp:example.ino
@@ -42,6 +43,7 @@ SoilSense init(byte min, byte max, byte samples, byte lowpass)
     max: The maximum amount of soil that can contain water. Get with measure().    
     samples: The number of samplings.    
     lowpass: The value of the low pass filter. The larger the value, the smoother it becomes.    
+
     Initialize SoilSense.
 
 ````cpp:example.ino
