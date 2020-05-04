@@ -21,18 +21,18 @@ int SoilSense::measure(int samples) {
   for (size_t i = 0; i < samples; i++) {
     val -= analogRead(_pin);
   }
-  return val / 10;
+  return val / samples;
 }
 
-byte SoilSense::value() {
-  long rawVal = convert(measure());
+byte SoilSense::value(int samples) {
+  long rawVal = convert(measure(samples));
   rawVal -= _min;
   if(rawVal < 0) rawVal = 0;
   rawVal = rawVal * 100 / (_max - _min);
   byte val = 100;
   if(rawVal < 100) val = (byte)rawVal;
-  val = val * (100 - _lowpass) / 100 + val * _lowpass / 100;
-  return val;
+  _value = val * (100 - _lowpass) / 100 + _value * _lowpass / 100;
+  return _value;
 }
 
 long SoilSense::convert(int value) {
