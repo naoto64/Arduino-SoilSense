@@ -10,9 +10,10 @@ SoilSense::SoilSense(uint8_t pin) {
   pinMode(pin, INPUT_PULLUP);
 }
 
-int SoilSense::init(int min, int max, byte lowpass) {
+int SoilSense::init(int min, int max, int samples, byte lowpass) {
   _min = convert(min);
   _max = convert(max);
+  _samples = samples;
   _lowpass = lowpass;
 }
 
@@ -24,8 +25,8 @@ int SoilSense::measure(int samples) {
   return val / samples;
 }
 
-byte SoilSense::value(int samples) {
-  long rawVal = convert(measure(samples));
+byte SoilSense::value() {
+  long rawVal = convert(measure(_samples));
   rawVal -= _min;
   if(rawVal < 0) rawVal = 0;
   rawVal = rawVal * 100 / (_max - _min);
