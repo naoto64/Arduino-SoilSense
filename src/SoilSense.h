@@ -15,7 +15,7 @@ public:
 private:
   long convert(int value);
   uint8_t _pin;
-  byte _lowpass
+  byte _lowpass;
   int _samples;
   int _value;
   long _min;
