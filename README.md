@@ -13,10 +13,11 @@ SoilSense ss = SoilSense(A0);
 
 void setup () {
   Serial.begin(9600);
+  ss.init(550, 800);
 }
 
 void loop () {
-  byte val = ss.value(50, 500);
+  byte val = ss.value();
   Serial.println(val);
 }
 ````
@@ -24,6 +25,7 @@ void loop () {
 ## Usage
 
 #### Method
+
 
 ````cpp:example.ino
 SoilSense SoilSense(uint8_t pin)
@@ -33,17 +35,26 @@ SoilSense SoilSense(uint8_t pin)
     Create an instance.
 
 ````cpp:example.ino
-measure()
+SoilSense init(byte min, byte max, byte samples, byte lowpass)
 ````
+
+    min: Value when the soil is dry. Get with measure().   
+    max: The maximum amount of soil that can contain water. Get with measure().    
+    samples: The number of samplings.    
+    lowpass: The value of the low pass filter. The larger the value, the smoother it becomes.    
+    Initialize SoilSense.
+
+````cpp:example.ino
+measure(byte samples = 1)
+````
+
+    samples: The number of samplings.    
 
     The raw value of the sensor. The range of values is 0 to 1023.
 
 ````cpp:example.ino
-value(int min, int max)
+value()
 ````
-
-    min: Value when the soil is dry. Get with measure ().   
-    max: The maximum amount of soil that can contain water. Get with measure ().  
 
     Returns the soil moisture in bytes. The range of values is 0 to 100.
 
