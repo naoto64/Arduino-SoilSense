@@ -3,7 +3,7 @@ Arduino-SoilSense
 
 ## Overview
 
-This is a soil humidity sensor library for Arduino. Connect the pins to the analog pin (requires pull-down resistor) and the 5V pin. If you use this library, the soil humidity will be returned in the range of 0-100. You can also make your own sensor terminals using metal bars or aluminum tape.
+This is a soil moisture sensor library for Arduino. Connect the pins to the analog pin (requires pull-down resistor) and the 5V pin. If you use this library, the soil moisture will be returned in the range of 0-100. You can also make your own sensor terminals using metal bars or aluminum tape.
 
 ## Demo
 
@@ -45,7 +45,7 @@ value(int min, int max)
     min: Value when the soil is dry. Get with measure ().   
     max: The maximum amount of soil that can contain water. Get with measure ().  
 
-    Returns the soil humidity in bytes. The range of values is 0 to 100.
+    Returns the soil moisture in bytes. The range of values is 0 to 100.
 
 ## License
 
