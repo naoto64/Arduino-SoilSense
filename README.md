@@ -29,8 +29,8 @@ void loop () {
 SoilSense SoilSense(uint8_t pin)
 ````
 
-    pin: Analog pin number
-    Create an instance
+    pin: Analog pin number  
+    Create an instance.
 
 ````cpp:example.ino
 measure()
@@ -43,7 +43,7 @@ value(int min, int max)
 ````
 
     min: Value when the soil is dry. Get with measure ().
-    max: The maximum amount of soil that can contain water. Get with measure ().
+    max: The maximum amount of soil that can contain water. Get with measure ().  
 
     Returns the soil humidity in bytes. The range of values is 0 to 100.
 
