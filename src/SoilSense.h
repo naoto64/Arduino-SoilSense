@@ -8,8 +8,8 @@
 class SoilSense {
 public:
   SoilSense(uint8_t pin);
-  long measure();
-  byte value(long min, long max);
+  int measure();
+  byte value(int min, int max);
 
 private:
   long convert(int value);
