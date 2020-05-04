@@ -30,8 +30,8 @@ byte SoilSense::value() {
   rawVal -= _min;
   if(rawVal < 0) rawVal = 0;
   rawVal = rawVal * 100 / (_max - _min);
-  if(rawVal > 100) rawVal = 100;
   _value = (byte)(rawVal * (100 - _lowpass) / 100 + (int)_value * _lowpass / 100);
+  if(_value > 100) _value = 100;
   return _value;
 }
 
