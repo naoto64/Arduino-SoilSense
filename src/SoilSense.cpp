@@ -23,7 +23,7 @@ byte SoilSense::value(int min, int max) {
   int val = measure();
   val -= _min;
   if(val < 0) val = 0;
-  val = val * 100 / (_max - _min);
+  val = (byte)(val * 100 / (_max - _min));
   if(val > 100) val = 100;
   return val;
 }
