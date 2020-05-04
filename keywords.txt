@@ -10,5 +10,6 @@ SoilSense	KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-value		KEYWORD2
-measure	KEYWORD2
+init      KEYWORD2
+measure   KEYWORD2
+value     KEYWORD2
