@@ -10,7 +10,7 @@ SoilSense::SoilSense(uint8_t pin) {
 }
 
 long SoilSense::measure() {
-  int val = 0;
+  long val = 0;
   for (size_t i = 0; i < 10; i++) {
     val += analogRead(_pin);
   }
