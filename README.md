@@ -5,6 +5,8 @@ Arduino-SoilSense
 
 This is a soil moisture sensor library for Arduino. Connect the pins to the analog pin (requires pull-down resistor) and the 5V pin. If you use this library, the soil moisture will be returned in the range of 0-100. You can also make your own sensor terminals using metal bars or aluminum tape.
 
+[![Soil moisture sensor](https://img.youtube.com/vi/bV2YAm3c4bY/0.jpg)](https://www.youtube.com/watch?v=bV2YAm3c4bY)
+
 ## Demo
 
 ````cpp:example.ino
